@@ -11,19 +11,23 @@ export default {
 const callback = action('accordion mode change event fired')
 
 const Template: Story<AccordionPropsType> = (args) =>  <Accordion {...args}/>
+const callBackProps = {
+    onChange: callback
+}
 
 export const MenuCollapsedMode = Template.bind({})
 MenuCollapsedMode.args = {
+    ...callBackProps, // деструктуризация
     titleValue: "Menu",
     collapsed: true,
-    onChange: callback
+
 }
 
 export const UsersUnCollapsedMode = Template.bind({})
 UsersUnCollapsedMode.args = {
+    ...callBackProps, // деструктуризация
     titleValue: "Users",
     collapsed: false,
-    onChange: callback
 }
 
 /*export const MenuCollapsedMode = () => <Accordion titleValue={"Menu"} collapsed={true} onChange={callback}/>*/
