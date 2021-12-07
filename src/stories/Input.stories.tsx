@@ -8,12 +8,24 @@ export default {
 }
 
 export const UncontrolledInput = () => <input/>
+
 export const TrackValueOfUncontrolledInput = () => {
     const [value, setValue] = useState("")
     return <><input onChange={(e) => {
         const actialValue = e.currentTarget.value
         setValue(actialValue) //можно сократить объеденив 2 строки
     }}/> - {value}</>
+}
+
+export const GetValueOfUncontrolledInputByButtonPress = () => {
+    const [value, setValue] = useState("")
+
+    return <><input/>
+        <button onClick={
+            () => {setValue("yo")}}>
+            save
+        </button>
+        - actual value: {value}</>
 }
 
 
