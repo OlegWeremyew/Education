@@ -13,7 +13,6 @@ export const TrackValueOfUncontrolledInput = () => {
     const [value, setValue] = useState("")
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-        debugger;
         const actialValue = e.currentTarget.value
         setValue(actialValue)
     }
