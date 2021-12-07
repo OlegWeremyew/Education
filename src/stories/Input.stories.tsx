@@ -36,5 +36,24 @@ export const GetValueOfUncontrolledInputByButtonPress = () => {
         - actual value: {value}</>
 }
 
+export const ControlledInput = () => {
+    const [parantValue, setParantValue] = useState("")
+    debugger;
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        debugger;
+        setParantValue(e.currentTarget.value)
+    }
+
+    return <input value={parantValue}
+                  onChange={onChangeHandler}/>
+}
+
+/*export const ControlledCheckbox = () => {
+
+}
+
+export const ControlledSelect = () => {
+
+}*/
 
 export const ControlledInputWithFixedValue = () => <input value={"Oleg"}/>
