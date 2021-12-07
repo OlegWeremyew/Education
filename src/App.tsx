@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import Accordion from "./components/Accordion/Accordion";
+import {Accordion} from "./components/Accordion/Accordion";
 import {RaitingValueType, Rating} from "./components/Raiting/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import UnControlledAccordion from "./components/UnControlledAccordion/UnControlledAccordion";
