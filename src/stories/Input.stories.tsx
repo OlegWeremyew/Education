@@ -62,12 +62,12 @@ export const ControlledCheckbox = () => {
 export const ControlledSelect = () => {
     const [parantValue, setParantValue] = useState<string | undefined>(undefined)
 
-    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
         setParantValue(e.currentTarget.value)
     }
 
     return (
-   <select value={parantValue}>
+   <select value={parantValue} onChange={onChangeHandler}>
         <option>none</option>
         <option value={"1"}>Minsk</option>
         <option value={"2"}>Moscow</option>

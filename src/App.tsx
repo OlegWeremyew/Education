@@ -5,6 +5,12 @@ import {RaitingValueType, Rating} from "./components/Raiting/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {UnControlledAccordion} from "./components/UnControlledAccordion/UnControlledAccordion";
+import {
+    ControlledCheckbox,
+    ControlledInput,
+    ControlledInputWithFixedValue,
+    ControlledSelect
+} from "./stories/Input.stories";
 /*import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRating";*/
 
 const App = () => {
@@ -28,6 +34,20 @@ const App = () => {
 
             {/*  <UncontrolledOnOff/>
             <UncontrolledOnOff/>*/}
+            <div>
+                <div>
+                    <ControlledInput/>
+                </div>
+                <div>
+                    <ControlledCheckbox/>
+                </div>
+                <div>
+                    <ControlledSelect/>
+                </div>
+                <div>
+                    <ControlledInputWithFixedValue/>
+                </div>
+            </div>
 
             {/*<PageTitle title={"This is APP component"}/>
             <PageTitle title={"My friends"}/>
