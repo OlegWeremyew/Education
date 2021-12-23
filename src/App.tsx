@@ -12,6 +12,7 @@ import {
     ControlledSelect
 } from "./stories/Input.stories";
 import {Select} from "./components/Select/Select";
+import {SelectNotMine} from "./components/Select/SelectNotMine";
 /*import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRating";*/
 
 const App = () => {
@@ -34,12 +35,6 @@ const App = () => {
         {title: 'valera', value: 3},
     ]
 
-    const [selectValue, setSelectValue] = useState<string | undefined>(undefined)
-
-    const onChangeSelectHandler = (e: ChangeEvent<HTMLSelectElement>) => {
-        setSelectValue(e.currentTarget.value)
-    }
-
     return (
         <div className={'App'}>
 
@@ -58,7 +53,6 @@ const App = () => {
 
             {/*  <UncontrolledOnOff/>
             <UncontrolledOnOff/>*/}
-            <Select value={"my select"} onChange={onChangeSelectHandler} items={itemsArray}/>
 
             <div>
                 <h4>Class 13</h4>
@@ -75,6 +69,14 @@ const App = () => {
                     <ControlledInputWithFixedValue/>
                 </div>
             </div>
+
+            <div>
+                <h4>Class 14</h4>
+                <SelectNotMine value={1} onChange={() => {
+                }} items={itemsArray}/>
+                <Select value={"my select"} items={itemsArray}/>
+            </div>
+
 
             {/*<PageTitle title={"This is APP component"}/>
             <PageTitle title={"My friends"}/>
