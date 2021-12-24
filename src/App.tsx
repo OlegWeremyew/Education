@@ -5,10 +5,16 @@ import {RaitingValueType, Rating} from "./components/Raiting/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {UnControlledAccordion} from "./components/UnControlledAccordion/UnControlledAccordion";
-import {ControlledCheckbox, ControlledInput, ControlledInputWithFixedValue, ControlledSelect} from "./stories/Input.stories";
+import {
+    ControlledCheckbox,
+    ControlledInput,
+    ControlledInputWithFixedValue,
+    ControlledSelect
+} from "./stories/Input.stories";
 import {Select} from "./components/Select/Select";
 import {SelectNotMine} from "./components/Select/SelectNotMine";
 import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRating";
+import {Example} from "./components/ReactMemo/ReactMemo";
 /*import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRating";*/
 
 const App = () => {
@@ -33,11 +39,11 @@ const App = () => {
 
     return (
         <div className={'App'}>
-
+            <Example/>
             {/*<OnOff on={switchOn} onChange={setswitchOn}/>
             <UncontrolledOnOff onChange={setswitchOn}/> {switchOn.toString()}*/}
-            <UnControlledAccordion titleValue={"Menu"}/>
-         {/*   <Accordion titleValue={"Menu"}
+           {/* <UnControlledAccordion titleValue={"Menu"}/>*/}
+            {/*   <Accordion titleValue={"Menu"}
                        collapsed={accordionCollapsed}
                        onChange={onChangeHandler}
                        onClick={onClickHandler}
