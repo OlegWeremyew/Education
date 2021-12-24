@@ -5,14 +5,10 @@ import {RaitingValueType, Rating} from "./components/Raiting/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {UnControlledAccordion} from "./components/UnControlledAccordion/UnControlledAccordion";
-import {
-    ControlledCheckbox,
-    ControlledInput,
-    ControlledInputWithFixedValue,
-    ControlledSelect
-} from "./stories/Input.stories";
+import {ControlledCheckbox, ControlledInput, ControlledInputWithFixedValue, ControlledSelect} from "./stories/Input.stories";
 import {Select} from "./components/Select/Select";
 import {SelectNotMine} from "./components/Select/SelectNotMine";
+import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRating";
 /*import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRating";*/
 
 const App = () => {
@@ -21,7 +17,7 @@ const App = () => {
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     let [switchOn, setswitchOn] = useState<boolean>(false)
 
-    let onClickHandler = function(){
+    let onClickHandler = function () {
         return "some item was clicked"
     }
 
@@ -38,23 +34,25 @@ const App = () => {
     return (
         <div className={'App'}>
 
-            <OnOff on={switchOn} onChange={setswitchOn}/>
-            <UncontrolledOnOff onChange={setswitchOn}/> {switchOn.toString()}
+            {/*<OnOff on={switchOn} onChange={setswitchOn}/>
+            <UncontrolledOnOff onChange={setswitchOn}/> {switchOn.toString()}*/}
             <UnControlledAccordion titleValue={"Menu"}/>
-            <Accordion titleValue={"Menu"}
+         {/*   <Accordion titleValue={"Menu"}
                        collapsed={accordionCollapsed}
                        onChange={onChangeHandler}
                        onClick={onClickHandler}
-            items={itemsArray}
+                       items={itemsArray}
             />
-            {/*<UncontrolledRating/>*/}
+            <UncontrolledRating/>
             <Rating value={raitingValue}
-                    onClick={setRaitingValue}/>
+                    onClick={setRaitingValue}/>*/}
 
             {/*  <UncontrolledOnOff/>
             <UncontrolledOnOff/>*/}
 
-            <div>
+            {/*=================================================*/}
+
+            {/*<div>
                 <h4>Class 13</h4>
                 <div>
                     <ControlledInput/>
@@ -68,14 +66,16 @@ const App = () => {
                 <div>
                     <ControlledInputWithFixedValue/>
                 </div>
-            </div>
+            </div>*/}
 
-            <div>
+            {/*=================================================*/}
+
+            {/*<div>
                 <h4>Class 14</h4>
                 <SelectNotMine value={1} onChange={() => {
                 }} items={itemsArray}/>
                 <Select value={"my select"} items={itemsArray}/>
-            </div>
+            </div>*/}
 
 
             {/*<PageTitle title={"This is APP component"}/>
