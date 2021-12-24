@@ -18,7 +18,9 @@ test("collapsed should be false", () => {
 })
 
 
+// пробник -----------------------------------------------------------
 
+/*
 test("reducer should throw error because action.type is incorrect", () => {
 
     //data
@@ -30,4 +32,4 @@ test("reducer should throw error because action.type is incorrect", () => {
     expect(() => {
         reducer(state, {type: "FAKE"})
     }).toThrowError()
-})
+})*/
