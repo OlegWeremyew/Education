@@ -5,6 +5,7 @@ type RatingType = {
 }
 
 export function Rating(props: RatingType) {
+
     return (
         <div>
             <Star selected={props.value > 0}/>
