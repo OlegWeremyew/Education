@@ -6,7 +6,7 @@ type AccordionPropsType = {
 
 type AccordionTitlePropsType = {
     title: string
-    setCollapsed: (collapsed: boolean) => void
+    setCollapsedCallback: (collapsed: boolean) => void
     collapsed: boolean
 }
 
@@ -16,8 +16,7 @@ const UncontrolledAccordion = (props: AccordionPropsType) => {
 
     return (
         <div>
-            <AccordionTitle title={props.titleValue} setCollapsed={setCollapsed} collapsed={collapsed}/>
-            <button onClick={()=>setCollapsed(!collapsed)}>TOGGLE</button>
+            <AccordionTitle title={props.titleValue} setCollapsedCallback={setCollapsed} collapsed={collapsed}/>
             {!collapsed && <AccordionBody/>}
         </div>
     )
@@ -26,7 +25,7 @@ const UncontrolledAccordion = (props: AccordionPropsType) => {
 function AccordionTitle(props: AccordionTitlePropsType) {
     return (
         <div onClick={() => {
-            props.setCollapsed(!props.collapsed)
+            props.setCollapsedCallback(!props.collapsed)
         }}>
             <h3>{props.title}</h3>
         </div>
