@@ -4,7 +4,7 @@ type PropsType = {
     onChange: (on: boolean) => void
 }
 
-const UncontrolledOnOff = (props: PropsType) => {
+export const UncontrolledOnOff = (props: PropsType) => {
 
     let [on, setOn] = useState<boolean>(false)
 
@@ -59,5 +59,3 @@ const UncontrolledOnOff = (props: PropsType) => {
         </div>
     );
 };
-
-export default UncontrolledOnOff;
