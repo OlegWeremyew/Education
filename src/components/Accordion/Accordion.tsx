@@ -2,7 +2,7 @@ import React from "react";
 
 export type ItemType = {
     title: string
-    value: number
+    value: any
 }
 
 
@@ -18,12 +18,12 @@ export type AccordionPropsType = {
      * Callback that is colled when any item clicked
      * @param value is value of clicked item
      */
-    onClick: (value: number) => void
+    onClick: (value: any) => void
 }
 
 export type AccordionBodyPropsType = {
     items: ItemType[]
-    onClick: (value: number) => void
+    onClick: (value: any) => void
 }
 
 type AccordionTitlePropsType = {
