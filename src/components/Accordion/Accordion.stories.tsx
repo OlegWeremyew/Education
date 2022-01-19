@@ -32,7 +32,7 @@ UsersUnCollapsedMode.args = {
     titleValue: "Users",
     collapsed: false,
     items: [
-        {title: "Dimich", value: 1},
+        {title: "Dmitri", value: 1},
         {title: "Valera", value: 2},
         {title: "Artem", value: 3},
         {title: "Victor", value: 4},
@@ -55,8 +55,7 @@ export const ModeChanging = () => {
             {title: "Artem", value: 3},
             {title: "Victor", value: 4},
         ]}
-           onClick={(value) => {
-               alert(`user with ID ${value} should be happy`)
-           }}
-    />
+        onClick={(value) => {
+            alert(`user with ID ${value} should be happy`)
+        }}/>
 }

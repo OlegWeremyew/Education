@@ -1,4 +1,5 @@
 import React from "react";
+
 export type ItemType = {
     title: string
     value: number
@@ -10,19 +11,19 @@ export type AccordionPropsType = {
     collapsed: boolean
     onChange: () => void
     /**
-    * Element that are showed when is opened. Each item should be [[ItemType]]
+     * Element that are showed when is opened. Each item should be [[ItemType]]
      */
-    items: Array<ItemType>
+    items: ItemType[]
     /**
      * Callback that is colled when any item clicked
      * @param value is value of clicked item
      */
-    onClick: (value: any) => void
+    onClick: (value: number) => void
 }
 
 export type AccordionBodyPropsType = {
-    items: Array<ItemType>
-    onClick: (value: any) => void
+    items: ItemType[]
+    onClick: (value: number) => void
 }
 
 type AccordionTitlePropsType = {
@@ -49,10 +50,8 @@ function AccordionTitle(props: AccordionTitlePropsType) {
 
 function AccordionBody(props: AccordionBodyPropsType) {
     return (
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
+        <ul>
+            {props.items.map((m, index) => <li key={index} onClick={()=>props.onClick(m.value)}>{m.title}</li>)}
+        </ul>
     )
 }
