@@ -22,14 +22,11 @@ const App = () => {
             <UncontrolledOnOff/>*/}
             {/*<OnOff on={switchOn} onChange={setSwitchOn}/>*/}
             <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
+            <UncontrolledAccordion titleValue={"Menu"}/>
        {/*     <UncontrolledAccordion titleValue={"Menu"}/>
             <UncontrolledAccordion titleValue={"Users"}/>
             <UncontrolledRating/>*/}
 
-            {/*<Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>*/}
         </div>
     )
 }
